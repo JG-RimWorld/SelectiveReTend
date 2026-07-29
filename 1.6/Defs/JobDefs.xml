@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+  <JobDef>
+    <defName>JG_SelectiveReTend</defName>
+    <driverClass>SelectiveReTend.JobDriver_SelectiveReTend</driverClass>
+    <reportString>re-tending TargetA.</reportString>
+    <casualInterruptible>false</casualInterruptible>
+  </JobDef>
+</Defs>

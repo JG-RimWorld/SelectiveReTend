@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ModMetaData>
+  <name>Selective ReTend</name>
+  <author>JG</author>
+  <packageId>jg.selectiveretend</packageId>
+  <supportedVersions>
+    <li>1.6</li>
+  </supportedVersions>
+  <description>Re-tend an existing treatment selectively and without wasting medicine.
+
+Treatments are considered in this order:
+1. Infections
+2. Immunizable diseases
+3. Injuries
+
+Each category can be enabled independently and has its own target quality. Infections and diseases use the best medicine allowed for the patient; injuries use the weakest medicine that can reasonably reach their configured target.
+
+Diseases cured through accumulated tend quality are deliberately excluded to prevent repeated tending from bypassing their normal treatment interval.
+
+Inspired by the concept behind ReTend by Temmie3754 and MrKev. Selective ReTend is an independent implementation.</description>
+</ModMetaData>

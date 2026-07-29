@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <SRT_SettingsCategory>Selective ReTend</SRT_SettingsCategory>
+  <SRT_SettingsCategories>Tipos de tratamiento permitidos</SRT_SettingsCategories>
+  <SRT_EnableInfections>Reatender infecciones</SRT_EnableInfections>
+  <SRT_EnableInfectionsTip>Usa la mejor medicina disponible que permita la atención médica asignada al paciente.</SRT_EnableInfectionsTip>
+  <SRT_EnableDiseases>Reatender enfermedades inmunizables</SRT_EnableDiseases>
+  <SRT_EnableDiseasesTip>Usa la mejor medicina disponible que permita la atención médica asignada al paciente.</SRT_EnableDiseasesTip>
+  <SRT_EnableInjuries>Reatender heridas</SRT_EnableInjuries>
+  <SRT_EnableInjuriesTip>Usa la medicina disponible más débil que pueda alcanzar razonablemente el objetivo para heridas.</SRT_EnableInjuriesTip>
+  <SRT_InfectionTarget>Objetivo para infecciones: {0}</SRT_InfectionTarget>
+  <SRT_DiseaseTarget>Objetivo para enfermedades: {0}</SRT_DiseaseTarget>
+  <SRT_InjuryTarget>Objetivo para heridas: {0}</SRT_InjuryTarget>
+  <SRT_SettingsAttempts>Intentos y mejora esperable</SRT_SettingsAttempts>
+  <SRT_SkipSmallImprovement>Omitir si la mejora razonablemente alcanzable es pequeña</SRT_SkipSmallImprovement>
+  <SRT_SkipSmallImprovementTip>Compara la calidad actual con el mejor resultado que tenga al menos un 50 % de probabilidad de alcanzarse con los intentos disponibles.</SRT_SkipSmallImprovementTip>
+  <SRT_MinimumImprovement>Mejora mínima: {0}</SRT_MinimumImprovement>
+  <SRT_MaxAttempts>Máximo de intentos por orden: {0}</SRT_MaxAttempts>
+  <SRT_Unlimited>ilimitados</SRT_Unlimited>
+  <SRT_AttemptsTip>Cero significa ilimitados. El trabajo se detiene si se agota la medicina o el objetivo deja de ser posible.</SRT_AttemptsTip>
+  <SRT_CategoryInfection>infección</SRT_CategoryInfection>
+  <SRT_CategoryDisease>enfermedad</SRT_CategoryDisease>
+  <SRT_CategoryInjury>herida</SRT_CategoryInjury>
+  <SRT_MenuOption>Reatender a {0}: {1}</SRT_MenuOption>
+  <SRT_MenuDetails>{0} → {1} · {2} de probabilidad en {3} · {4}</SRT_MenuDetails>
+  <SRT_MenuUnlimited>{0} → {1} · repetir hasta conseguirlo · {2}</SRT_MenuUnlimited>
+  <SRT_WithoutMedicine>sin medicina</SRT_WithoutMedicine>
+  <SRT_AttemptSingular>1 intento</SRT_AttemptSingular>
+  <SRT_AttemptPlural>{0} intentos</SRT_AttemptPlural>
+  <SRT_NoLongerAvailable>Ahora mismo no hay ningún tratamiento elegible que pueda mejorarse.</SRT_NoLongerAvailable>
+  <SRT_CannotReTend>No se puede reatender a {0}</SRT_CannotReTend>
+  <SRT_JobReport>reatendiendo a {0}.</SRT_JobReport>
+  <SRT_MoteImproved>Reatendido: {0}\nCalidad {1}</SRT_MoteImproved>
+  <SRT_MoteNotImproved>Reatención fallida: {0}\nCalidad {1}</SRT_MoteNotImproved>
+</LanguageData>

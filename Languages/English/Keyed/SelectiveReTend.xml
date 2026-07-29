@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LanguageData>
+  <SRT_SettingsCategory>Selective ReTend</SRT_SettingsCategory>
+  <SRT_SettingsCategories>Eligible treatment types</SRT_SettingsCategories>
+  <SRT_EnableInfections>Re-tend infections</SRT_EnableInfections>
+  <SRT_EnableInfectionsTip>Uses the best available medicine allowed by the patient's medical care setting.</SRT_EnableInfectionsTip>
+  <SRT_EnableDiseases>Re-tend immunizable diseases</SRT_EnableDiseases>
+  <SRT_EnableDiseasesTip>Uses the best available medicine allowed by the patient's medical care setting.</SRT_EnableDiseasesTip>
+  <SRT_EnableInjuries>Re-tend injuries</SRT_EnableInjuries>
+  <SRT_EnableInjuriesTip>Uses the weakest available medicine that can reasonably reach the injury target.</SRT_EnableInjuriesTip>
+  <SRT_InfectionTarget>Infection target: {0}</SRT_InfectionTarget>
+  <SRT_DiseaseTarget>Disease target: {0}</SRT_DiseaseTarget>
+  <SRT_InjuryTarget>Injury target: {0}</SRT_InjuryTarget>
+  <SRT_SettingsAttempts>Attempts and expected improvement</SRT_SettingsAttempts>
+  <SRT_SkipSmallImprovement>Skip when the reasonably attainable improvement is small</SRT_SkipSmallImprovement>
+  <SRT_SkipSmallImprovementTip>Compares the current quality with the best result that has at least a 50% chance of being reached within the available attempts.</SRT_SkipSmallImprovementTip>
+  <SRT_MinimumImprovement>Minimum improvement: {0}</SRT_MinimumImprovement>
+  <SRT_MaxAttempts>Maximum attempts per order: {0}</SRT_MaxAttempts>
+  <SRT_Unlimited>unlimited</SRT_Unlimited>
+  <SRT_AttemptsTip>Zero means unlimited. The job still stops if medicine runs out or the target becomes impossible.</SRT_AttemptsTip>
+  <SRT_CategoryInfection>infection</SRT_CategoryInfection>
+  <SRT_CategoryDisease>disease</SRT_CategoryDisease>
+  <SRT_CategoryInjury>injury</SRT_CategoryInjury>
+  <SRT_MenuOption>Re-tend {0}: {1}</SRT_MenuOption>
+  <SRT_MenuDetails>{0} → {1} · {2} chance in {3} · {4}</SRT_MenuDetails>
+  <SRT_MenuUnlimited>{0} → {1} · repeat until reached · {2}</SRT_MenuUnlimited>
+  <SRT_WithoutMedicine>without medicine</SRT_WithoutMedicine>
+  <SRT_AttemptSingular>1 attempt</SRT_AttemptSingular>
+  <SRT_AttemptPlural>{0} attempts</SRT_AttemptPlural>
+  <SRT_NoLongerAvailable>No eligible treatment can currently be improved.</SRT_NoLongerAvailable>
+  <SRT_CannotReTend>Cannot re-tend {0}</SRT_CannotReTend>
+  <SRT_JobReport>re-tending {0}.</SRT_JobReport>
+  <SRT_MoteImproved>Re-tended {0}\nQuality {1}</SRT_MoteImproved>
+  <SRT_MoteNotImproved>Re-tend failed {0}\nQuality {1}</SRT_MoteNotImproved>
+</LanguageData>
