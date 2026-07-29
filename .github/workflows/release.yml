@@ -1,0 +1,74 @@
+name: Build and publish release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    name: Build RimWorld mod
+    runs-on: windows-latest
+
+    env:
+      GH_TOKEN: ${{ github.token }}
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v6
+
+      - name: Set up .NET
+        uses: actions/setup-dotnet@v5
+        with:
+          dotnet-version: "8.x"
+
+      - name: Set up Python
+        uses: actions/setup-python@v6
+        with:
+          python-version: "3.13"
+
+      - name: Validate release version
+        shell: pwsh
+        run: |
+          $version = (Get-Content VERSION.txt -Raw).Trim()
+          $expectedTag = "v$version"
+
+          if ("${{ github.ref_name }}" -ne $expectedTag) {
+              throw "Tag '${{ github.ref_name }}' does not match VERSION.txt ('$expectedTag')."
+          }
+
+          "MOD_VERSION=$version" >> $env:GITHUB_ENV
+
+      - name: Restore dependencies
+        run: dotnet restore Source/SelectiveReTend.csproj
+
+      - name: Build DLL
+        run: dotnet build Source/SelectiveReTend.csproj --configuration Release --no-restore
+
+      - name: Create installable ZIP
+        run: python scripts/package_release.py --version "${{ env.MOD_VERSION }}"
+
+      - name: Publish GitHub release
+        shell: pwsh
+        run: |
+          $tag = "${{ github.ref_name }}"
+          $version = "${{ env.MOD_VERSION }}"
+          $asset = "artifacts/SelectiveReTend-v$version.zip"
+          $notes = "Workshop/ReleaseNotes-$version.txt"
+
+          gh release view $tag *> $null
+          if ($LASTEXITCODE -eq 0) {
+              gh release upload $tag $asset --clobber
+              gh release edit $tag `
+                --title "Selective ReTend v$version" `
+                --notes-file $notes
+          }
+          else {
+              gh release create $tag $asset `
+                --verify-tag `
+                --title "Selective ReTend v$version" `
+                --notes-file $notes
+          }

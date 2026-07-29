@@ -73,6 +73,35 @@ dotnet build -c Release
 The project uses `Krafs.Rimworld.Ref` and writes the compiled assembly to
 `1.6/Assemblies`.
 
+## Download and installation
+
+Download `SelectiveReTend-vX.Y.Z.zip` from the latest
+[GitHub release](https://github.com/jgonc19/SelectiveReTend/releases/latest).
+Extract its `SelectiveReTend` folder into RimWorld's local `Mods` directory,
+then enable **Selective ReTend** in the game's mod manager.
+
+Do not use GitHub's automatically generated **Source code** archives as the
+installed mod: they do not contain the compiled DLL.
+
+## Publishing a GitHub release
+
+The release workflow compiles the DLL, creates an installable ZIP, validates
+its structure and attaches it to a GitHub release.
+
+1. Update `VERSION.txt`, `About/About.xml`, the project version in
+   `Source/SelectiveReTend.csproj`, `CHANGELOG.md`, and the matching release
+   notes in `Workshop`.
+2. Commit and push those changes.
+3. Create and push a tag matching `VERSION.txt`, for example:
+
+   ```bash
+   git tag -a v0.2.0 -m "Selective ReTend v0.2.0"
+   git push origin v0.2.0
+   ```
+
+The workflow is stored in `.github/workflows/release.yml`. A tag whose name
+does not exactly match `v` plus the contents of `VERSION.txt` is rejected.
+
 ## Credits
 
 Concept inspired by ReTend by Temmie3754 and MrKev. No source code from ReTend

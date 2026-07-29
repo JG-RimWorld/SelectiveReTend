@@ -2,5 +2,6 @@
 1.6/Assemblies/*.pdb
 Source/bin/
 Source/obj/
+artifacts/
 .vs/
 .idea/
