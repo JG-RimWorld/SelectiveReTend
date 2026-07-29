@@ -1,0 +1,47 @@
+[h1]Selective ReTend[/h1]
+
+Mejora un tratamiento existente cuando su calidad actual no sea suficiente, manteniendo el control sobre las prioridades, el uso de medicina y los intentos repetidos.
+
+[b]Funcionamiento[/b]
+[list]
+[*]Selecciona un médico y haz clic derecho sobre el paciente.
+[*]Selective ReTend elige la afección elegible de mayor prioridad.
+[*]La prioridad es infección → enfermedad u otra afección tratable → herida.
+[*]Cada categoría puede activarse o desactivarse de forma independiente y tiene su propio objetivo de calidad.
+[*]El menú contextual muestra la afección elegida, calidad actual, objetivo, probabilidad de éxito, intentos y medicina.
+[/list]
+
+[b]Política de medicina[/b]
+[list]
+[*]Las infecciones y enfermedades usan la mejor medicina disponible permitida por la atención médica asignada al paciente.
+[*]Las heridas usan la medicina más débil que pueda alcanzar razonablemente el objetivo configurado.
+[*]El número máximo de intentos es configurable; 0 significa intentos ilimitados mientras el objetivo siga siendo alcanzable.
+[*]Un filtro configurable evita reatender cuando la mejora alcanzable sea demasiado pequeña. Está activado por defecto.
+[/list]
+
+[b]Protecciones de equilibrio[/b]
+[list]
+[*]Se excluyen las afecciones que se curan acumulando calidad de tratamiento, por lo que no puede evitarse su intervalo normal.
+[*]La nueva atención solo sustituye la calidad actual si el resultado es mejor.
+[*]No prolonga la duración del tratamiento vigente.
+[*]Los intentos repetidos no conceden experiencia médica, oportunidades de vínculo, registros ni progreso de misiones adicionales.
+[*]La medicina se consume aunque el nuevo resultado sea peor que el tratamiento actual.
+[/list]
+
+[b]Compatibilidad[/b]
+[list]
+[*]RimWorld 1.6.
+[*]Sin dependencias de DLC ni frameworks.
+[*]Admite afecciones atendidas y no permanentes con un componente activo de duración de tratamiento, incluidas lung rot, blood rot, mechanites, asma y carcinoma.
+[*]Las afecciones añadidas por otros mods pueden marcarse como infección o excluirse mediante una pequeña ModExtension.
+[/list]
+
+[b]Partidas guardadas[/b]
+
+El mod no añade objetos, edificios ni afecciones permanentes. Puede añadirse a una partida existente. Antes de retirarlo, deja que finalicen los trabajos activos de Selective ReTend y conserva la copia de seguridad habitual de la partida.
+
+[b]Créditos[/b]
+
+Concepto inspirado por ReTend, de Temmie3754 y MrKev. Selective ReTend es una implementación independiente y no contiene código fuente de ReTend.
+
+[url=https://github.com/jgonc19/SelectiveReTend]Código fuente y seguimiento de incidencias[/url]

@@ -66,6 +66,9 @@ public sealed class SelectiveReTendMod : Mod
             roundTo: 1f));
         TooltipHandler.TipRegion(attemptsRect, "SRT_AttemptsTip".Translate());
 
+        listing.Gap();
+        listing.Label("SRT_Version".Translate(SelectiveReTendVersion.Current));
+
         listing.End();
         base.DoSettingsWindowContents(inRect);
     }

@@ -17,8 +17,12 @@ repeat the compatibility cases with the normal mod list.
 - A tended wound below 60% produces no option while injuries are disabled.
 - Enabling injuries makes that wound eligible.
 - With an eligible infection and disease on the same pawn, the menu names the
-  infection.
+  actual infection selected, not just its category.
 - With an eligible disease and wound, the menu names the disease.
+- A pawn with only flu produces a menu option naming flu and uses the disease
+  target, never the infection target.
+- Lung rot, blood rot, fibrous mechanites, and sensory mechanites all produce
+  an option when their existing treatment is below the disease target.
 - Intestinal worms and muscle parasites never produce an option.
 - Permanent-tend and fully cured/immune hediffs never produce an option.
 

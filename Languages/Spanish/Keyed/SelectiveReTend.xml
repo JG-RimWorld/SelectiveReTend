@@ -4,7 +4,7 @@
   <SRT_SettingsCategories>Tipos de tratamiento permitidos</SRT_SettingsCategories>
   <SRT_EnableInfections>Reatender infecciones</SRT_EnableInfections>
   <SRT_EnableInfectionsTip>Usa la mejor medicina disponible que permita la atención médica asignada al paciente.</SRT_EnableInfectionsTip>
-  <SRT_EnableDiseases>Reatender enfermedades inmunizables</SRT_EnableDiseases>
+  <SRT_EnableDiseases>Reatender enfermedades y afecciones tratables</SRT_EnableDiseases>
   <SRT_EnableDiseasesTip>Usa la mejor medicina disponible que permita la atención médica asignada al paciente.</SRT_EnableDiseasesTip>
   <SRT_EnableInjuries>Reatender heridas</SRT_EnableInjuries>
   <SRT_EnableInjuriesTip>Usa la medicina disponible más débil que pueda alcanzar razonablemente el objetivo para heridas.</SRT_EnableInjuriesTip>
@@ -18,6 +18,7 @@
   <SRT_MaxAttempts>Máximo de intentos por orden: {0}</SRT_MaxAttempts>
   <SRT_Unlimited>ilimitados</SRT_Unlimited>
   <SRT_AttemptsTip>Cero significa ilimitados. El trabajo se detiene si se agota la medicina o el objetivo deja de ser posible.</SRT_AttemptsTip>
+  <SRT_Version>Versión {0}</SRT_Version>
   <SRT_CategoryInfection>infección</SRT_CategoryInfection>
   <SRT_CategoryDisease>enfermedad</SRT_CategoryDisease>
   <SRT_CategoryInjury>herida</SRT_CategoryInjury>

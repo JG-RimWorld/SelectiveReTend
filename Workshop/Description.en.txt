@@ -1,0 +1,47 @@
+[h1]Selective ReTend[/h1]
+
+Improve an existing treatment when its current quality is not good enough, while keeping control over priorities, medicine use and repeated attempts.
+
+[b]How it works[/b]
+[list]
+[*]Select a doctor and right-click the patient.
+[*]Selective ReTend chooses the highest-priority eligible condition.
+[*]Priority is infection → disease or other treatable condition → injury.
+[*]Each category can be enabled or disabled independently and has its own target quality.
+[*]The contextual menu shows the selected condition, current quality, target, chance of success, attempts and medicine.
+[/list]
+
+[b]Medicine policy[/b]
+[list]
+[*]Infections and diseases use the best available medicine allowed by the patient's medical-care setting.
+[*]Injuries use the weakest medicine that can reasonably reach their configured target.
+[*]The maximum number of attempts is configurable; 0 means unlimited attempts while the target remains reachable.
+[*]A configurable improvement filter prevents re-tending when the attainable gain is too small. It is enabled by default.
+[/list]
+
+[b]Balance safeguards[/b]
+[list]
+[*]Conditions cured through accumulated tending quality are excluded, so their normal treatment interval cannot be bypassed.
+[*]A re-tend only replaces the current quality when the new result is better.
+[*]It does not extend the current treatment duration.
+[*]Repeated attempts do not grant additional medical XP, bonding attempts, records or quest progress.
+[*]Medicine is still consumed when an attempt rolls worse than the current treatment.
+[/list]
+
+[b]Compatibility[/b]
+[list]
+[*]RimWorld 1.6.
+[*]No DLC or framework dependencies.
+[*]Supports tended, non-permanent conditions with a live tend-duration component, including lung rot, blood rot, mechanites, asthma and carcinoma.
+[*]Modded conditions can opt into infection priority or opt out through a small ModExtension.
+[/list]
+
+[b]Save games[/b]
+
+The mod adds no items, buildings or permanent health conditions. It can be added to an existing save. Before removing it, let any active Selective ReTend job finish and keep the usual backup of your save.
+
+[b]Credits[/b]
+
+Concept inspired by ReTend by Temmie3754 and MrKev. Selective ReTend is an independent implementation and contains no ReTend source code.
+
+[url=https://github.com/jgonc19/SelectiveReTend]Source code and issue tracker[/url]

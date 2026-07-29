@@ -3,6 +3,8 @@
   <name>Selective ReTend</name>
   <author>JG</author>
   <packageId>jg.selectiveretend</packageId>
+  <url>https://github.com/jgonc19/SelectiveReTend</url>
+  <modVersion>0.2.0</modVersion>
   <supportedVersions>
     <li>1.6</li>
   </supportedVersions>
@@ -10,7 +12,7 @@
 
 Treatments are considered in this order:
 1. Infections
-2. Immunizable diseases
+2. Diseases and other treatable conditions
 3. Injuries
 
 Each category can be enabled independently and has its own target quality. Infections and diseases use the best medicine allowed for the patient; injuries use the weakest medicine that can reasonably reach their configured target.

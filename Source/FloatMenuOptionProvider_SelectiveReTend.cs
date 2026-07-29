@@ -115,7 +115,7 @@ public sealed class FloatMenuOptionProvider_SelectiveReTend : FloatMenuOptionPro
 
     private static string BuildLabel(Pawn patient, ReTendPlan plan)
     {
-        string category = CategoryLabel(plan.Candidate.Category);
+        string hediffLabel = plan.Candidate.Hediff.Label.CapitalizeFirst();
         string medicine = plan.Medicine.UsesMedicine
             ? plan.Medicine.MedicineDef.LabelCap
             : "SRT_WithoutMedicine".Translate();
@@ -141,18 +141,7 @@ public sealed class FloatMenuOptionProvider_SelectiveReTend : FloatMenuOptionPro
                 medicine);
         }
 
-        return "SRT_MenuOption".Translate(patient.LabelShort, category) + " — " + details;
-    }
-
-    private static string CategoryLabel(TreatmentCategory category)
-    {
-        return category switch
-        {
-            TreatmentCategory.Infection => "SRT_CategoryInfection".Translate(),
-            TreatmentCategory.Disease => "SRT_CategoryDisease".Translate(),
-            TreatmentCategory.Injury => "SRT_CategoryInjury".Translate(),
-            _ => category.ToString()
-        };
+        return "SRT_MenuOption".Translate(patient.LabelShort, hediffLabel) + " — " + details;
     }
 
     private static bool IsValidPatient(Pawn doctor, Pawn patient)

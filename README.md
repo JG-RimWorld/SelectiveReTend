@@ -1,13 +1,18 @@
 # Selective ReTend
 
+Current source version: **0.2.0**
+
 Selective ReTend is an independent RimWorld 1.6 mod inspired by the idea behind
 ReTend. It lets the player order a doctor to improve an existing treatment while
 controlling priorities, medicine use, and the number of attempts.
 
+![Selective ReTend preview](About/Preview.png)
+
 ## Default behaviour
 
 1. Infections: enabled, 70% target, best allowed medicine.
-2. Immunizable diseases: enabled, 60% target, best allowed medicine.
+2. Diseases and other treatable conditions: enabled, 60% target, best allowed
+   medicine.
 3. Injuries: disabled, 60% target, weakest medicine reasonably capable of
    reaching the target.
 
@@ -19,6 +24,10 @@ subject to medicine availability and mathematical reachability.
 ## Balance safeguards
 
 - Hediffs with `disappearsAtTotalTendQuality >= 0` are never eligible.
+- Any other tended, non-permanent hediff with a live
+  `HediffComp_TendDuration` is eligible even if it cannot develop natural
+  immunity. This includes lung rot, blood rot, both vanilla mechanite
+  conditions, asthma, and carcinoma.
 - A re-tend replaces only the current quality when the new roll is better.
 - It does not extend the existing tend duration.
 - It does not grant repeatable medical XP, bonding attempts, records, or quest
@@ -49,7 +58,9 @@ Modded hediffs can opt into infection priority or opt out entirely:
 </modExtensions>
 ```
 
-RimWorld 1.6's native `HediffDef.isInfection` is recognized automatically.
+The vanilla wound infection is recognized explicitly. RimWorld 1.6's
+`HediffDef.isInfection` is intentionally not used because it also marks
+ordinary diseases such as flu as infections.
 
 ## Build
 
@@ -66,3 +77,9 @@ The project uses `Krafs.Rimworld.Ref` and writes the compiled assembly to
 
 Concept inspired by ReTend by Temmie3754 and MrKev. No source code from ReTend
 is included.
+
+## Steam Workshop
+
+Publication copy, tags, the full-size artwork and a checklist are kept in
+[`Workshop`](Workshop/README.md). `About/Preview.png` is the image used
+automatically by RimWorld's mod manager and Workshop publisher.

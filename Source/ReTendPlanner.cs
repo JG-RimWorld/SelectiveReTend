@@ -182,27 +182,32 @@ public static class ReTendPlanner
             return false;
         }
 
-        TreatmentCategory? category = Classify(hediff, extension);
-        if (category == null || !SelectiveReTendMod.Settings.Enabled(category.Value))
+        TreatmentCategory category = Classify(hediff, extension);
+        if (!SelectiveReTendMod.Settings.Enabled(category))
         {
             return false;
         }
 
-        float target = SelectiveReTendMod.Settings.TargetFor(category.Value);
+        float target = SelectiveReTendMod.Settings.TargetFor(category);
         if (tendComp.tendQuality >= target)
         {
             return false;
         }
 
-        candidate = new ReTendCandidate(hediff, tendComp, category.Value, target);
+        candidate = new ReTendCandidate(hediff, tendComp, category, target);
         return true;
     }
 
-    private static TreatmentCategory? Classify(
+    private static TreatmentCategory Classify(
         Hediff hediff,
         SelectiveReTendExtension extension)
     {
-        if (hediff.def.isInfection || extension?.isInfection == true)
+        // HediffDef.isInfection is broader than "wound infection" in RimWorld
+        // 1.6 and marks ordinary diseases such as flu as infections too. The
+        // vanilla local infection has its own def; modded infections can opt
+        // into the same priority through SelectiveReTendExtension.
+        if (hediff.def == HediffDefOf.WoundInfection
+            || extension?.isInfection == true)
         {
             return TreatmentCategory.Infection;
         }
@@ -212,12 +217,11 @@ public static class ReTendPlanner
             return TreatmentCategory.Injury;
         }
 
-        if (hediff.def.PossibleToDevelopImmunityNaturally())
-        {
-            return TreatmentCategory.Disease;
-        }
-
-        return null;
+        // Reaching this point already proves that the hediff has a live,
+        // non-accumulative TendDuration comp. This deliberately includes
+        // treatable conditions that do not gain natural immunity, such as
+        // lung rot, blood rot, mechanites, asthma, and carcinoma.
+        return TreatmentCategory.Disease;
     }
 
     private static float ImmunityMargin(ReTendCandidate candidate)

@@ -1,0 +1,9 @@
+Initial public release of Selective ReTend for RimWorld 1.6.
+
+- Re-tend infections, diseases and injuries with independent settings.
+- Infection → disease → injury priority.
+- Configurable target quality and number of attempts.
+- Different medicine policies for dangerous conditions and ordinary injuries.
+- Generic support for tended conditions that do not develop immunity.
+- Safeguards against accumulated-treatment, duration and medical-XP exploits.
+- English and Spanish translations.
